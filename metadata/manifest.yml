@@ -11,8 +11,8 @@ License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
 Cartridge-Version: 0.0.11
 Compatible-Versions:
 - 0.0.10
-Cartridge-Vendor: YoMamma
-Vendor: YoMamma
+Cartridge-Vendor: asimonel
+Vendor: asimonel
 Categories:
 - web_framework
 - experimental
