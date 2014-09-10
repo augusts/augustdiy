@@ -1,0 +1,55 @@
+---
+Name: cmjavacart
+Cartridge-Short-Name: DIY
+Display-Name: cm-java-cart 0.1
+Description: The Do-It-Yourself (DIY) application type is a blank slate for trying
+  unsupported languages, frameworks, and middleware on OpenShift. See the community
+  site for examples of bringing your favorite framework to OpenShift.
+Version: '0.1'
+License: ASL 2.0
+License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
+Cartridge-Version: 0.0.11
+Compatible-Versions:
+- 0.0.10
+Cartridge-Vendor: Red Hat
+Vendor: Red Hat
+Categories:
+- web_framework
+- experimental
+Website: 
+Help-Topics:
+  Getting Started: https://www.openshift.com/videos/getting-started-with-diy-applications-on-openshift
+Provides:
+- augustdiy-0.1
+- augustdiy
+Publishes: 
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+Scaling:
+  Min: 3
+  Max: 8
+Group-Overrides:
+- components:
+  - web-proxy
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+    primary: true
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: true
+  - Frontend: /health
+    Backend: ''
+    Options:
+      health: true
+Source-Url: https://github.com/augusts/augustdiy.git
