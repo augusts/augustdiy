@@ -34,12 +34,12 @@ Group-Overrides:
 - components:
   - web-proxy
 Endpoints:
-- Private-IP-Name: DB_HOST
-  Private-Port-Name: DB_PORT
-  Private-Port: 3306
-  Public-Port-Name: DB_PROXY_PORT
+- Private-IP-Name: AUGUST_INT_IP
+  Private-Port-Name: AUGUST_INT_PORT
+  Private-Port: 11111
+  Public-Port-Name: AUGUST_PUB_PORT
   Protocols:
-  - mysql
+  - http
 - Private-IP-Name: IP
   Private-Port-Name: PORT
   Private-Port: 8080
