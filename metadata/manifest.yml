@@ -40,6 +40,9 @@ Endpoints:
   Public-Port-Name: DB_PROXY_PORT
   Protocols:
   - mysql
+- Private-IP-Name:   INTERNAL_SERVICE_IP
+  Private-Port-Name: 5544
+  Public-Port-Name:  INTERNAL_SERVICE_PORT
 - Private-IP-Name: IP
   Private-Port-Name: PORT
   Private-Port: 8080
