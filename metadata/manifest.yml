@@ -1,5 +1,5 @@
 ---
-Name: cmjavacart
+Name: augustdiycart
 Cartridge-Short-Name: DIY
 Display-Name: august-diy
 Description: The Do-It-Yourself (DIY) application type is a blank slate for trying
@@ -28,12 +28,18 @@ Subscribes:
     Type: ENV:*
     Required: false
 Scaling:
-  Min: 2
+  Min: 1
   Max: 8
 Group-Overrides:
 - components:
   - web-proxy
 Endpoints:
+- Private-IP-Name: DB_HOST
+  Private-Port-Name: DB_PORT
+  Private-Port: 3306
+  Public-Port-Name: DB_PROXY_PORT
+  Protocols:
+  - mysql
 - Private-IP-Name: IP
   Private-Port-Name: PORT
   Private-Port: 8080
